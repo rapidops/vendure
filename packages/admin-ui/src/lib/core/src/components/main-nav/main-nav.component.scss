@@ -3,7 +3,9 @@
 :host {
     // flex: 0 0 auto;
     order: -1;
-    background-color: var(--clr-nav-background-color);
+    //background-color: var(--clr-nav-background-color);
+    background-color: #343e4a;
+    color: #fff;
 }
 
 nav.sidenav {
@@ -19,6 +21,16 @@ nav.sidenav {
 .nav-group,
 .nav-link {
     position: relative;
+    color: #a6a8b1;
+    label{
+        color: #a6a8b1;
+    }
+}
+.sidenav .nav-group .nav-list, .sidenav .nav-group label{ padding: 0 0 0 0.8rem;}
+.nav-link {
+    &:hover{
+        background-color: #2e3344 !important;
+    }
 }
 
 .status-badge {
