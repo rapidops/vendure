@@ -154,6 +154,21 @@ export class MainNavComponent implements OnInit, OnDestroy {
                 ],
             },
             {
+                id: 'cms',
+                label: _('nav.cms'),
+                requiresPermission: allow(Permission.ReadPromotion),
+                items: [
+                    {
+                        requiresPermission: allow(Permission.ReadPromotion),
+                        id: 'promotionsrapidshop-cms',
+                        label: _('nav.rapidshop-cms'),
+                        isSFMenu: true,
+                        routerLink: ['/marketing', 'promotions'],
+                        icon: 'asterisk',
+                    },
+                ],
+            },
+            {
                 id: 'marketing',
                 label: _('nav.marketing'),
                 requiresPermission: allow(Permission.ReadPromotion),
@@ -295,5 +310,8 @@ export class MainNavComponent implements OnInit, OnDestroy {
                 ],
             },
         ]);
+    }
+    redirectToPage(item: any) {
+        window.open('https://web-dev.rapidretail.io/admin/#/app/dashboard', '_blanck');
     }
 }

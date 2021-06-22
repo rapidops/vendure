@@ -27,6 +27,7 @@ export interface NavMenuBadge {
 export interface NavMenuItem {
     id: string;
     label: string;
+    isSFMenu?: boolean;
     routerLink: RouterLinkDefinition;
     onClick?: (event: MouseEvent) => void;
     icon?: string;

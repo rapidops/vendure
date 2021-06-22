@@ -67,6 +67,7 @@ export class BaseListComponent<ResultType, ItemType, VariableType = any> impleme
 
         this.result$ = this.listQuery.stream$.pipe(shareReplay(1));
         this.items$ = this.result$.pipe(map(data => this.mappingFn(data).items));
+
         this.totalItems$ = this.result$.pipe(map(data => this.mappingFn(data).totalItems));
         this.currentPage$ = this.route.queryParamMap.pipe(
             map(qpm => qpm.get('page')),

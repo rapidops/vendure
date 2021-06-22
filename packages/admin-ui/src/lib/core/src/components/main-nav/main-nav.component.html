@@ -14,11 +14,29 @@
                 <label [for]="section.id">{{ section.label | translate }}</label>
                 <ul class="nav-list">
                     <ng-container *ngFor="let item of section.items">
-                        <li *ngIf="shouldDisplayLink(item)">
+                        <li *ngIf="shouldDisplayLink(item) && !item.isSFMenu" >
                             <a
                                 class="nav-link"
                                 [attr.data-item-id]="section.id"
                                 [routerLink]="getRouterLink(item)"
+                                routerLinkActive="active"
+                            >
+                                <ng-container *ngIf="item.statusBadge | async as itemBadge">
+                                    <div
+                                        *ngIf="itemBadge.type !== 'none'"
+                                        class="status-badge"
+                                        [class]="itemBadge.type"
+                                    ></div>
+                                </ng-container>
+                                <clr-icon [attr.shape]="item.icon || 'block'" size="20"></clr-icon>
+                                {{ item.label | translate }}
+                            </a>
+                        </li>
+                        <li *ngIf="shouldDisplayLink(item) && item.isSFMenu">
+                            <a
+                                class="nav-link"
+                                [attr.data-item-id]="section.id"
+                                (click)='redirectToPage(item)'
                                 routerLinkActive="active"
                             >
                                 <ng-container *ngIf="item.statusBadge | async as itemBadge">
