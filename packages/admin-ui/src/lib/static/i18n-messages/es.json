@@ -362,7 +362,7 @@
   },
   "error": {
     "403-forbidden": "Tu sesión ha expirado, por favor vuelve a inicar sesión",
-    "could-not-connect-to-server": "No podemos conectar con el servidor vendure { url }",
+    "could-not-connect-to-server": "No podemos conectar con el servidor rapidshop { url }",
     "facet-value-form-values-do-not-match": "El nnumero de valores en la faceta, no coincide con el numero de variantes que existen",
     "health-check-failed": "",
     "no-default-shipping-zone-set": "",
