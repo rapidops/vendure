@@ -1,11 +1,20 @@
 @import 'variables';
 
 .login-wrapper {
-    background: var(--login-page-bg);
-    background-size: auto;
+    //background: var(--login-page-bg);
+    //background-size: auto;
     justify-content: center;
+    background: #fff;
+    img{
+        width: 220px;
+    }
 }
-
+.login-wrapper .login{background: none; box-shadow: none;}
+.login-wrapper .login:after{display: none;}
+.login-wrapper .login .login-inner{background: #fff; padding: 20px; border-radius: 10px; border: 1px solid var(--color-grey-300);}
+.login-wrapper .login .login-group .btn{background: #ff7444; border-color: #ff7444; outline: none; margin-top: 0;}
+.login-wrapper .login .login-group .btn.disabled, .login-wrapper .login .login-group .btn:disabled, .login-wrapper .login .login-group .btn.disabled, .login-wrapper .login .login-group .btn:disabled{color: #fff;}
+.login-wrapper .login .login-group .btn:hover,.login-wrapper .login .login-group .btn:hover{color: #fff;}
 .title {
     text-align: center;
 }

@@ -1,6 +1,7 @@
 <div class="login-wrapper">
     <form class="login">
-        <label class="title"><img src="assets/logo-300px.png" /></label>
+        <div class="login-inner">
+        <label class="title text-center clr-display-block"><img src="assets/images/rapidshop-logo@2x.png" alt='RapidShop Logo'></label>
         <div class="login-group">
             <input
                 class="username"
@@ -46,8 +47,9 @@
         </div>
         <div class="version">
             <span *ngIf="brand">{{ brand }} <span *ngIf="!hideVendureBranding || !hideVersion">-</span></span>
-            <span *ngIf="!hideVendureBranding">vendure</span>
+            <span *ngIf="!hideVendureBranding">rapidshop</span>
             <span *ngIf="!hideVersion">v{{ version }}</span>
+        </div>
         </div>
     </form>
 </div>
