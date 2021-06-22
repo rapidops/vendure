@@ -89,8 +89,7 @@ export class CoreModule {
     }
 
     private initUiTitle() {
-        const title = getAppConfig().brand || 'RapidShopAdmin';
-
+        const title = 'RapidShopAdmin';
         this.titleService.setTitle(title);
     }
 }
