@@ -30,9 +30,10 @@ nav.sidenav {
 .nav-link {
     &:hover{
         background-color: #2e3344 !important;
+        color: #a6a8b1;
     }
 }
-
+.sidenav .nav-group .nav-list .nav-link.active{ background:#d8e3e9 !important; }
 .status-badge {
     width: 10px;
     height: 10px;
