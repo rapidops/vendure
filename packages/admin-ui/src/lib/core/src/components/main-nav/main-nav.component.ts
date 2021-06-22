@@ -312,6 +312,6 @@ export class MainNavComponent implements OnInit, OnDestroy {
         ]);
     }
     redirectToPage(item: any) {
-        window.open('https://web-dev.rapidretail.io/admin/#/app/dashboard', '_blanck');
+        window.open('https://web-dev.rapidretail.io/admin/#/app/dashboard', '_blank');
     }
 }
